@@ -1,26 +1,12 @@
 # 🩸 Bloodell — Histórias de Usuário
 
-> **Entrega 01 — Engenharia de Requisitos**
+> **Entrega 01**
 
-## 📋 Sobre este documento
+## Sobre este documento
 
 Este documento apresenta as histórias de usuário do projeto **Bloodell**, elaboradas a partir das personas identificadas para o sistema.
 
-As histórias descrevem necessidades reais dos diferentes perfis de usuários e apresentam:
-
-* 👤 Persona relacionada;
-* 📖 História de usuário;
-* 💼 Contexto de negócio;
-* 📌 Regras de negócio;
-* 🎯 Valor entregue;
-* ⭐ Prioridade;
-* 🧪 Critérios de aceitação utilizando BDD.
-
-> ⚠️ Todas as funcionalidades possuem finalidade acadêmica e utilizam exclusivamente dados sintéticos. O Bloodell não substitui protocolos médicos, clínicos ou sistemas oficiais da Hemorrede/SUS.
-
----
-
-# 👥 Personas relacionadas
+# Personas relacionadas
 
 As histórias foram construídas com base nas seguintes personas:
 
@@ -31,9 +17,8 @@ As histórias foram construídas com base nas seguintes personas:
 | 🚚 Coordenador Logístico                                    | Distribuição e roteirização            |
 | 📊 Gestor da Rede de Sangue                                 | Gestão estratégica e indicadores       |
 
----
 
-# ⭐ Priorização das histórias
+# Priorização das histórias
 
 As histórias foram classificadas utilizando o método **MoSCoW**.
 
@@ -42,27 +27,19 @@ As histórias foram classificadas utilizando o método **MoSCoW**.
 | 🔴 Must Have   | Essencial para a primeira versão do sistema |
 | 🟠 Should Have | Muito importante para o produto             |
 | 🟡 Could Have  | Diferencial que agrega valor                |
-| ⚪ Won't Have   | Planejado para versões futuras              |
+| ⚪ Won't Have  | Planejado para versões futuras              |
 
----
 
-# 🩸 US01 — Cadastro de bolsa por código de barras
+# US01 — Cadastro de bolsa por código de barras
 
 **Persona:** 🔬 Técnico de Hemoterapia
-
-**Épico:** Gestão de Estoque
-
 **Prioridade:** 🟡 Could Have
 
----
-
-## 👤 História de usuário
+## História de usuário
 
 **Como Técnico de Hemoterapia, quero escanear o código de barras de uma nova bolsa para preencher automaticamente suas informações e registrar sua entrada no estoque de forma rápida e organizada.**
 
----
-
-## 💼 Contexto de negócio
+## Contexto de negócio
 
 O Técnico de Hemoterapia trabalha diretamente com a entrada e organização das bolsas disponíveis.
 
@@ -72,9 +49,7 @@ O Bloodell deverá permitir a simulação da leitura de um código de barras par
 
 O usuário deverá revisar as informações antes de confirmar o cadastro.
 
----
-
-## 📌 Regras de negócio
+## Regras de negócio
 
 * Cada bolsa deve possuir um identificador único;
 * O sistema deve tentar localizar os dados associados ao código informado;
@@ -83,16 +58,14 @@ O usuário deverá revisar as informações antes de confirmar o cadastro.
 * Após a confirmação, a bolsa deverá ser registrada no estoque;
 * O código de barras será utilizado apenas em uma simulação acadêmica.
 
----
-
-## 🎯 Valor entregue
+## Valor entregue
 
 * Redução de erros manuais;
 * Maior velocidade no cadastro;
 * Melhor organização do estoque;
 * Maior rastreabilidade das bolsas.
 
----
+
 
 ## 🧪 Critérios de aceitação — BDD
 
@@ -122,9 +95,7 @@ Dado que os dados da bolsa foram preenchidos corretamente
 Quando o Técnico confirmar o cadastro
 Então a bolsa deve ser registrada no sistema
 E ficar disponível no estoque conforme seu status.
-```
 
----
 
 # 📊 US02 — Previsão de demanda e risco de desperdício
 
