@@ -95,25 +95,18 @@ Dado que os dados da bolsa foram preenchidos corretamente
 Quando o Técnico confirmar o cadastro
 Então a bolsa deve ser registrada no sistema
 E ficar disponível no estoque conforme seu status.
+```
 
-
-# 📊 US02 — Previsão de demanda e risco de desperdício
+# US02 — Previsão de demanda e risco de desperdício
 
 **Persona:** 📊 Gestor da Rede de Sangue
-
-**Épico:** Inteligência e Previsão
-
 **Prioridade:** 🟠 Should Have
 
----
-
-## 👤 História de usuário
+## História de usuário
 
 **Como Gestor da Rede de Sangue, quero visualizar previsões de demanda para os próximos sete dias para identificar riscos de desperdício ou falta de hemocomponentes e tomar decisões antecipadamente.**
 
----
-
-## 💼 Contexto de negócio
+## Contexto de negócio
 
 O Gestor precisa acompanhar não apenas a situação atual do estoque, mas também possíveis cenários futuros.
 
@@ -121,9 +114,7 @@ Bolsas possuem prazo de validade limitado e podem ser desperdiçadas caso não s
 
 O sistema deverá analisar dados históricos sintéticos e informações do estoque para gerar previsões para os próximos sete dias.
 
----
-
-## 📌 Regras de negócio
+## Regras de negócio
 
 * A previsão deve utilizar dados históricos sintéticos;
 * O período analisado será de sete dias;
@@ -133,8 +124,6 @@ O sistema deverá analisar dados históricos sintéticos e informações do esto
 * O sistema poderá identificar possível falta de estoque;
 * As previsões possuem finalidade exclusivamente acadêmica.
 
----
-
 ## 🎯 Valor entregue
 
 * Antecipação de possíveis problemas;
@@ -142,9 +131,7 @@ O sistema deverá analisar dados históricos sintéticos e informações do esto
 * Melhor planejamento do estoque;
 * Apoio à tomada de decisões estratégicas.
 
----
-
-## 🧪 Critérios de aceitação — BDD
+## Critérios de aceitação — BDD
 
 ### Cenário 1: Visualização da previsão
 
@@ -171,25 +158,17 @@ Quando o estoque disponível for menor que a demanda prevista
 Então o sistema deve apresentar um alerta de possível falta de hemocomponentes.
 ```
 
----
-
-# 🚚 US03 — Análise de rotas e possíveis congestionamentos
+# US03 — Análise de rotas e possíveis congestionamentos
 
 **Persona:** 🚚 Coordenador Logístico
-
-**Épico:** Distribuição Inteligente
-
 **Prioridade:** 🟡 Could Have
 
----
 
-## 👤 História de usuário
+## História de usuário
 
 **Como Coordenador Logístico, quero receber análises sobre as condições das rotas de distribuição para identificar possíveis congestionamentos ou atrasos e escolher uma rota alternativa para reduzir o risco de atraso nas entregas.**
 
----
-
-## 💼 Contexto de negócio
+## Contexto de negócio
 
 O Coordenador Logístico é responsável por organizar a distribuição de hemocomponentes entre os pontos da rede.
 
