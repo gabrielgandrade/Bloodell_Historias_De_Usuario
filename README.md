@@ -33,6 +33,7 @@ As histórias foram classificadas utilizando o método **MoSCoW**.
 # US01 — Cadastro de bolsa por código de barras
 
 **Persona:** 🔬 Técnico de Hemoterapia
+
 **Prioridade:** 🟡 Could Have
 
 ## História de usuário
@@ -100,6 +101,7 @@ E ficar disponível no estoque conforme seu status.
 # US02 — Previsão de demanda e risco de desperdício
 
 **Persona:** 📊 Gestor da Rede de Sangue
+
 **Prioridade:** 🟠 Should Have
 
 ## História de usuário
