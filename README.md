@@ -1,10 +1,12 @@
 # 🩸 Bloodell — Histórias de Usuário
 
-> **Entrega 01**
+> **Entrega 01 **
 
 ## Sobre este documento
 
 Este documento apresenta as histórias de usuário do projeto **Bloodell**, elaboradas a partir das personas identificadas para o sistema.
+
+---
 
 # Personas relacionadas
 
@@ -17,6 +19,7 @@ As histórias foram construídas com base nas seguintes personas:
 | 🚚 Coordenador Logístico                                    | Distribuição e roteirização            |
 | 📊 Gestor da Rede de Sangue                                 | Gestão estratégica e indicadores       |
 
+---
 
 # Priorização das histórias
 
@@ -27,8 +30,9 @@ As histórias foram classificadas utilizando o método **MoSCoW**.
 | 🔴 Must Have   | Essencial para a primeira versão do sistema |
 | 🟠 Should Have | Muito importante para o produto             |
 | 🟡 Could Have  | Diferencial que agrega valor                |
-| ⚪ Won't Have  | Planejado para versões futuras              |
+| ⚪ Won't Have   | Planejado para versões futuras              |
 
+---
 
 # US01 — Cadastro de bolsa por código de barras
 
@@ -36,9 +40,13 @@ As histórias foram classificadas utilizando o método **MoSCoW**.
 
 **Prioridade:** 🟡 Could Have
 
+---
+
 ## História de usuário
 
 **Como Técnico de Hemoterapia, quero escanear o código de barras de uma nova bolsa para preencher automaticamente suas informações e registrar sua entrada no estoque de forma rápida e organizada.**
+
+---
 
 ## Contexto de negócio
 
@@ -50,6 +58,8 @@ O Bloodell deverá permitir a simulação da leitura de um código de barras par
 
 O usuário deverá revisar as informações antes de confirmar o cadastro.
 
+---
+
 ## Regras de negócio
 
 * Cada bolsa deve possuir um identificador único;
@@ -59,6 +69,8 @@ O usuário deverá revisar as informações antes de confirmar o cadastro.
 * Após a confirmação, a bolsa deverá ser registrada no estoque;
 * O código de barras será utilizado apenas em uma simulação acadêmica.
 
+---
+
 ## Valor entregue
 
 * Redução de erros manuais;
@@ -66,9 +78,9 @@ O usuário deverá revisar as informações antes de confirmar o cadastro.
 * Melhor organização do estoque;
 * Maior rastreabilidade das bolsas.
 
+---
 
-
-## 🧪 Critérios de aceitação — BDD
+## Critérios de aceitação — BDD
 
 ### Cenário 1: Leitura válida do código
 
@@ -98,15 +110,21 @@ Então a bolsa deve ser registrada no sistema
 E ficar disponível no estoque conforme seu status.
 ```
 
+---
+
 # US02 — Previsão de demanda e risco de desperdício
 
 **Persona:** 📊 Gestor da Rede de Sangue
 
 **Prioridade:** 🟠 Should Have
 
+---
+
 ## História de usuário
 
 **Como Gestor da Rede de Sangue, quero visualizar previsões de demanda para os próximos sete dias para identificar riscos de desperdício ou falta de hemocomponentes e tomar decisões antecipadamente.**
+
+---
 
 ## Contexto de negócio
 
@@ -115,6 +133,8 @@ O Gestor precisa acompanhar não apenas a situação atual do estoque, mas tamb�
 Bolsas possuem prazo de validade limitado e podem ser desperdiçadas caso não sejam utilizadas antes do vencimento.
 
 O sistema deverá analisar dados históricos sintéticos e informações do estoque para gerar previsões para os próximos sete dias.
+
+---
 
 ## Regras de negócio
 
@@ -126,12 +146,16 @@ O sistema deverá analisar dados históricos sintéticos e informações do esto
 * O sistema poderá identificar possível falta de estoque;
 * As previsões possuem finalidade exclusivamente acadêmica.
 
-## 🎯 Valor entregue
+---
+
+## Valor entregue
 
 * Antecipação de possíveis problemas;
 * Redução do desperdício;
 * Melhor planejamento do estoque;
 * Apoio à tomada de decisões estratégicas.
+
+---
 
 ## Critérios de aceitação — BDD
 
@@ -160,15 +184,21 @@ Quando o estoque disponível for menor que a demanda prevista
 Então o sistema deve apresentar um alerta de possível falta de hemocomponentes.
 ```
 
+---
+
 # US03 — Análise de rotas e possíveis congestionamentos
 
 **Persona:** 🚚 Coordenador Logístico
+
 **Prioridade:** 🟡 Could Have
 
+---
 
 ## História de usuário
 
 **Como Coordenador Logístico, quero receber análises sobre as condições das rotas de distribuição para identificar possíveis congestionamentos ou atrasos e escolher uma rota alternativa para reduzir o risco de atraso nas entregas.**
+
+---
 
 ## Contexto de negócio
 
@@ -180,7 +210,7 @@ O Bloodell deverá representar os locais da rede através de um grafo e utilizar
 
 ---
 
-## 📌 Regras de negócio
+## Regras de negócio
 
 * Os locais da rede devem ser representados como nós de um grafo;
 * As conexões devem representar caminhos possíveis;
@@ -191,7 +221,7 @@ O Bloodell deverá representar os locais da rede através de um grafo e utilizar
 
 ---
 
-## 🎯 Valor entregue
+## Valor entregue
 
 * Melhor planejamento das entregas;
 * Identificação antecipada de atrasos;
@@ -200,7 +230,7 @@ O Bloodell deverá representar os locais da rede através de um grafo e utilizar
 
 ---
 
-## 🧪 Critérios de aceitação — BDD
+## Critérios de aceitação — BDD
 
 ### Cenário 1: Identificação de congestionamento
 
@@ -229,23 +259,21 @@ Então o sistema deve apresentar a distância e o tempo estimado de cada rota di
 
 ---
 
-# ⏳ US04 — Seleção automática utilizando FEFO
+# US04 — Seleção automática utilizando FEFO
 
 **Persona:** 🔬 Técnico de Hemoterapia
-
-**Épico:** Gestão de Estoque e Distribuição
 
 **Prioridade:** 🔴 Must Have
 
 ---
 
-## 👤 História de usuário
+## História de usuário
 
 **Como Técnico de Hemoterapia, quero que o sistema priorize automaticamente as bolsas com data de validade mais próxima para reduzir o desperdício causado pelo vencimento de hemocomponentes.**
 
 ---
 
-## 💼 Contexto de negócio
+## Contexto de negócio
 
 Durante o atendimento de uma solicitação, é necessário selecionar bolsas disponíveis para separação e distribuição.
 
@@ -259,7 +287,7 @@ Para fins acadêmicos, a implementação poderá utilizar uma **fila de priorida
 
 ---
 
-## 📌 Regras de negócio
+## Regras de negócio
 
 * Bolsas vencidas não podem ser selecionadas;
 * Apenas bolsas disponíveis podem participar da seleção;
@@ -269,7 +297,7 @@ Para fins acadêmicos, a implementação poderá utilizar uma **fila de priorida
 
 ---
 
-## 🎯 Valor entregue
+## Valor entregue
 
 * Redução do desperdício;
 * Melhor aproveitamento do estoque;
@@ -278,7 +306,7 @@ Para fins acadêmicos, a implementação poderá utilizar uma **fila de priorida
 
 ---
 
-## 🧪 Critérios de aceitação — BDD
+## Critérios de aceitação — BDD
 
 ### Cenário 1: Priorização por validade
 
@@ -307,23 +335,21 @@ Então deve informar que o estoque é insuficiente para atender completamente a 
 
 ---
 
-# 🩸 US05 — Visualização e controle do estoque
+# US05 — Visualização e controle do estoque
 
 **Persona:** 🔬 Técnico de Hemoterapia
-
-**Épico:** Gestão de Estoque
 
 **Prioridade:** 🔴 Must Have
 
 ---
 
-## 👤 História de usuário
+## História de usuário
 
 **Como Técnico de Hemoterapia, quero visualizar as bolsas disponíveis organizadas por tipo sanguíneo e hemocomponente para acompanhar a situação do estoque e identificar necessidades de reposição ou riscos de vencimento.**
 
 ---
 
-## 💼 Contexto de negócio
+## Contexto de negócio
 
 O Técnico precisa acompanhar constantemente a disponibilidade dos hemocomponentes.
 
@@ -337,7 +363,7 @@ Uma visualização organizada permite identificar rapidamente:
 
 ---
 
-## 📌 Regras de negócio
+## Regras de negócio
 
 Cada bolsa deve possuir informações como:
 
@@ -354,7 +380,7 @@ O sistema deverá permitir a organização e consulta dessas informações.
 
 ---
 
-## 🎯 Valor entregue
+## Valor entregue
 
 * Maior controle operacional;
 * Visualização rápida da disponibilidade;
@@ -363,7 +389,7 @@ O sistema deverá permitir a organização e consulta dessas informações.
 
 ---
 
-## 🧪 Critérios de aceitação — BDD
+## Critérios de aceitação — BDD
 
 ### Cenário 1: Visualização do estoque
 
@@ -391,23 +417,21 @@ Então o sistema deve destacar essas bolsas.
 
 ---
 
-# 🏥 US06 — Criação e acompanhamento de requisições
+# US06 — Criação e acompanhamento de requisições
 
 **Persona:** 🏥 Profissional Responsável pelas Solicitações Hospitalares
-
-**Épico:** Gestão de Requisições
 
 **Prioridade:** 🔴 Must Have
 
 ---
 
-## 👤 História de usuário
+## História de usuário
 
 **Como profissional responsável pelas solicitações hospitalares, quero registrar uma requisição de hemocomponentes informando quantidade, prioridade e prazo para que o hemocentro possa organizar o atendimento da necessidade do hospital.**
 
 ---
 
-## 💼 Contexto de negócio
+## Contexto de negócio
 
 Os hospitais precisam comunicar suas necessidades ao hemocentro responsável pela distribuição.
 
@@ -415,7 +439,7 @@ A requisição centraliza as informações necessárias para organizar o atendim
 
 ---
 
-## 📌 Regras de negócio
+## Regras de negócio
 
 Cada requisição deverá possuir:
 
@@ -429,7 +453,7 @@ Cada requisição deverá possuir:
 
 ---
 
-## 🎯 Valor entregue
+## Valor entregue
 
 * Organização das solicitações;
 * Melhor comunicação entre hospital e hemocentro;
@@ -438,7 +462,7 @@ Cada requisição deverá possuir:
 
 ---
 
-## 🧪 Critérios de aceitação — BDD
+## Critérios de aceitação — BDD
 
 ### Cenário 1: Criação da requisição
 
@@ -466,23 +490,21 @@ Então o sistema deve apresentar o status atual do atendimento.
 
 ---
 
-# ❄️ US07 — Monitoramento da cadeia fria durante o transporte
+# US07 — Monitoramento da cadeia fria durante o transporte
 
 **Persona:** 🚚 Coordenador Logístico
-
-**Épico:** Monitoramento Logístico
 
 **Prioridade:** 🔴 Must Have
 
 ---
 
-## 👤 História de usuário
+## História de usuário
 
 **Como Coordenador Logístico, quero acompanhar a temperatura e o status das entregas durante o transporte para identificar problemas na cadeia fria e agir rapidamente diante de possíveis riscos logísticos.**
 
 ---
 
-## 💼 Contexto de negócio
+## Contexto de negócio
 
 Durante a distribuição de hemocomponentes, o Coordenador Logístico precisa acompanhar as condições das entregas.
 
@@ -497,7 +519,7 @@ As informações poderão incluir:
 
 ---
 
-## 📌 Regras de negócio
+## Regras de negócio
 
 * A telemetria será simulada;
 * A temperatura deverá ser monitorada durante a entrega;
@@ -508,7 +530,7 @@ As informações poderão incluir:
 
 ---
 
-## 🎯 Valor entregue
+## Valor entregue
 
 * Maior visibilidade das entregas;
 * Identificação rápida de problemas;
@@ -517,7 +539,7 @@ As informações poderão incluir:
 
 ---
 
-## 🧪 Critérios de aceitação — BDD
+## Critérios de aceitação — BDD
 
 ### Cenário 1: Temperatura dentro da faixa
 
@@ -553,7 +575,7 @@ Então o sistema deve apresentar os alertas ativos relacionados às entregas.
 
 ---
 
-# 📊 Matriz de rastreabilidade
+# Matriz de rastreabilidade
 
 A tabela abaixo demonstra a relação entre as personas e as histórias de usuário.
 
@@ -608,44 +630,3 @@ As histórias cobrem os quatro principais módulos do projeto.
 | 🚚 Distribuição  | US03 e US04       |
 | 📊 Monitoramento | US02 e US07       |
 
----
-
-# ⚠️ Limitações do escopo
-
-O Bloodell é um projeto acadêmico baseado em simulações.
-
-Portanto:
-
-* Todos os dados utilizados serão sintéticos;
-* Não serão utilizados dados reais de pacientes ou doadores;
-* A compatibilidade sanguínea terá finalidade exclusivamente didática;
-* A telemetria será simulada;
-* As informações sobre trânsito poderão ser simuladas;
-* As previsões possuem finalidade acadêmica;
-* O sistema não substitui protocolos clínicos ou sistemas oficiais da Hemorrede/SUS.
-
----
-
-# 🚀 Conclusão
-
-As histórias de usuário apresentadas foram construídas a partir das necessidades das principais personas do Bloodell.
-
-Essa relação permite garantir que cada funcionalidade desenvolvida possua um propósito claro e entregue valor para pelo menos um perfil de usuário do sistema.
-
-A estrutura definida estabelece a seguinte relação:
-
-```text
-👥 PERSONAS
-     ↓
-🎯 NECESSIDADES
-     ↓
-📖 HISTÓRIAS DE USUÁRIO
-     ↓
-📌 REGRAS DE NEGÓCIO
-     ↓
-🧪 CENÁRIOS BDD
-     ↓
-💻 DESENVOLVIMENTO
-```
-
-> 🩸 **Bloodell — Gestão, distribuição e monitoramento inteligente da rede de sangue.**
