@@ -1,6 +1,6 @@
-# 🩸 Bloodell — Histórias de Usuário
+# Histórias de Usuário
 
-> **Entrega 01 **
+> **Entrega 01**
 
 ## Sobre este documento
 
@@ -36,7 +36,7 @@ As histórias foram classificadas utilizando o método **MoSCoW**.
 
 # US01 — Cadastro de bolsa por código de barras
 
-**Persona:** 🔬 Técnico de Hemoterapia
+**Persona:** Técnico de Hemoterapia
 
 **Prioridade:** 🟡 Could Have
 
@@ -114,7 +114,7 @@ E ficar disponível no estoque conforme seu status.
 
 # US02 — Previsão de demanda e risco de desperdício
 
-**Persona:** 📊 Gestor da Rede de Sangue
+**Persona:** Gestor da Rede de Sangue
 
 **Prioridade:** 🟠 Should Have
 
@@ -188,7 +188,7 @@ Então o sistema deve apresentar um alerta de possível falta de hemocomponentes
 
 # US03 — Análise de rotas e possíveis congestionamentos
 
-**Persona:** 🚚 Coordenador Logístico
+**Persona:** Coordenador Logístico
 
 **Prioridade:** 🟡 Could Have
 
@@ -261,7 +261,7 @@ Então o sistema deve apresentar a distância e o tempo estimado de cada rota di
 
 # US04 — Seleção automática utilizando FEFO
 
-**Persona:** 🔬 Técnico de Hemoterapia
+**Persona:** Técnico de Hemoterapia
 
 **Prioridade:** 🔴 Must Have
 
@@ -337,7 +337,7 @@ Então deve informar que o estoque é insuficiente para atender completamente a 
 
 # US05 — Visualização e controle do estoque
 
-**Persona:** 🔬 Técnico de Hemoterapia
+**Persona:** Técnico de Hemoterapia
 
 **Prioridade:** 🔴 Must Have
 
@@ -419,7 +419,7 @@ Então o sistema deve destacar essas bolsas.
 
 # US06 — Criação e acompanhamento de requisições
 
-**Persona:** 🏥 Profissional Responsável pelas Solicitações Hospitalares
+**Persona:** Profissional Responsável pelas Solicitações Hospitalares
 
 **Prioridade:** 🔴 Must Have
 
@@ -492,7 +492,7 @@ Então o sistema deve apresentar o status atual do atendimento.
 
 # US07 — Monitoramento da cadeia fria durante o transporte
 
-**Persona:** 🚚 Coordenador Logístico
+**Persona:** Coordenador Logístico
 
 **Prioridade:** 🔴 Must Have
 
@@ -616,17 +616,3 @@ A tabela abaixo demonstra a relação entre as personas e as histórias de usuá
 │
 └── US02 → Previsão de demanda
 ```
-
----
-
-# 🎯 Cobertura dos módulos do Bloodell
-
-As histórias cobrem os quatro principais módulos do projeto.
-
-| Módulo           | Histórias         |
-| ---------------- | ----------------- |
-| 🩸 Estoque       | US01, US04 e US05 |
-| 🏥 Requisições   | US06              |
-| 🚚 Distribuição  | US03 e US04       |
-| 📊 Monitoramento | US02 e US07       |
-
